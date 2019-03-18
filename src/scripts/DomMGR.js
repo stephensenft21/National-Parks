@@ -1,3 +1,5 @@
+const nationalParks = document.querySelector("#display-container");
+
 const createNationalParksVisited = (parkObject) => {
     return `
         <article class="true">
@@ -19,11 +21,13 @@ const createNationalParksNotVisited = (parkObject) => {
 }
 
 
-const renderParks = parks => {
- parks.foreach(parkObject => {})
- if (parkObjects)
+const renderParks = (parks) => {
+    parks.forEach(parkObject => {
+        if (parkObject.visited) {
+            nationalParks.innerHTML += createNationalParksVisited(parkObject)
+
+        } else {
+            nationalParks.innerHTML += createNationalParksNotVisited(parkObject)
+        }
+    })
 }
-
-// const nationalParksContainer = document.querySelector("#display-container")
-// nationalParksContainer.innerHTML = createNationalParks()
-

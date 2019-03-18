@@ -1,0 +1,9 @@
+.true{
+    border-style: dashed;
+    border-color:red;
+}
+
+.false{
+    border-style: solid;
+    border-color: green;
+}
